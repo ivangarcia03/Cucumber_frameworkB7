@@ -26,5 +26,12 @@ export default defineConfig({
       // Make sure to return the config object as it might have been modified by the plugin.
       return config;
     },
+
+    env:{
+      filterSpecs: true,
+      // Without this command, it will skip other tests so it is going our test execution to be slow
+      // So adding this command will complately ignore the tests other than our defined @tag
+      omitFiltered: true
+    }
   },
 });

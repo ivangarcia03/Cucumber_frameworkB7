@@ -8,7 +8,3 @@ When('user search for {string}', (search) => {
 Then('user should see {string} in the URL', (url) => {
     cy.url().should('include', url)
 })
-
-Then('user should see {string} in the title', (title) => {
-    cy.title().should('include', title)
-})
